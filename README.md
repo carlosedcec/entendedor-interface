@@ -10,13 +10,13 @@ Sistema para acompanhamento e controle de sintomas de pessoas que sofrem de cond
 
 A arquitetura do projeto é baseada no cenário 1 sendo composta por três componentes:
 
-1) Interface (front-end)
+1) Interface (front-end)<br>
 Construída com HTML, CSS e TypeScript
 
-2) API Externa (ViaCEP)
+2) API Externa (ViaCEP)<br>
 API [ViaCEP](https://viacep.com.br/) utilizada para pegar o endereço automaticamente durante o cadastro de usuário via método get que retorna um JSON (exemplo: viacep.com.br/ws/01001000/json)
 
-3) API (back-end)
+3) API (back-end)<br>
 Construída com Python (flask, openapi e sqlalchemy) e SQLIte
 
 ![arquitetura entendedor](arquitetura-entendedor.png)

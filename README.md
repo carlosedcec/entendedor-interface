@@ -32,16 +32,12 @@ Construída com Python (flask, openapi e sqlalchemy) e SQLIte
 
     `docker network create entendedor-net`
 
-5. Caso ainda não tenha criado, crie um docker volume para garantir a persistência do banco de dados **executando como administrador** o seguinte comando:
-
-    `docker volume create entendedor-volume`
-
-6. Navegue até o diretório raiz do entendedor-interface que contém o Dockerfile e **execute como administrador** o seguinte comando para construir a imagem Docker:
+5. Navegue até o diretório raiz do entendedor-interface que contém o Dockerfile e **execute como administrador** o seguinte comando para construir a imagem Docker:
 
     `docker build -t entendedor-interface .`
 
-7. Em seguida, execute o seguinte comando para rodar um container a partir da imagem gerada:
+6. Em seguida, execute o seguinte comando para rodar um container a partir da imagem gerada:
 
     `docker run -p 80:80 --network entendedor-net -d entendedor-interface`
 
-8. Pronto, agora basta acessar [http://localhost](http://localhost) para ter acesso à aplicação.
+7. Pronto, agora basta acessar [http://localhost](http://localhost) para ter acesso à aplicação.

@@ -19,6 +19,8 @@ API [ViaCEP](https://viacep.com.br/) utilizada para pegar o endereço automatica
 3) API (back-end)
 Construída com Python (flask, openapi e sqlalchemy) e SQLIte
 
+![arquitetura entendedor](arquitetura-entendedor.png)
+
 ## 🛠️ Instalação
 
 1. Clone o repositório:<br>

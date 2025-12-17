@@ -40,7 +40,7 @@ Construída com Python (flask, openapi e sqlalchemy) e SQLIte
 
     `docker build -t entendedor-interface .`
 
-7. Em seguida, execute o seguinte comando para rodar um container a partir da imagem gerada (lembre-se de ter criado a docker network indicada nas instruções do [servidor](https://github.com/carlosedcec/entededor-back-end)):
+7. Em seguida, execute o seguinte comando para rodar um container a partir da imagem gerada (lembre-se de ter criado a docker network indicada nas instruções do [servidor](https://github.com/carlosedcec/entendedor-api)):
 
     `docker run -p 80:80 --network entendedor-net -d entendedor-interface`
 

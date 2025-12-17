@@ -1,0 +1,176 @@
+/* DataTable Styles */
+.table-container {
+    overflow-x: auto;
+}
+
+.table-controls {
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.table-search {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    min-width: 200px;
+}
+
+.table-page-size {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+.data-table th,
+.data-table td {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+#recordsDataTable th:not(:first-child),
+#recordsDataTable td:not(:first-child) {
+    text-align: center;
+}
+
+#historico #recordsDataTable {
+    font-size: 14px;
+}
+
+#historico #recordsDataTable td:last-child {
+    color: #999;
+}
+
+#recordsDataTable tr:last-child td {
+    font-weight: bold;
+}
+
+#recordsDataTable tr:last-child td.sum-column {
+    background: rgb(255, 255, 221);
+}
+
+.data-table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+.data-table th:hover {
+    background-color: #e5e5e5;
+}
+
+.data-table th.actions {
+    width: 88px;
+}
+
+.data-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.data-table tbody tr:hover {
+    background-color: #f0f0f0;
+}
+
+.data-table tbody tr.highest-sum {
+    color: #85140c;
+    background-color: #fff6f5;
+}
+
+.data-table tbody tr.lowest-sum {
+    color: #0c8612;
+    background-color: #f4fff6;
+}
+
+.data-table tbody td.empty-record {
+    text-align: center;
+}
+
+.data-table tbody td.actions {
+    display: flex;
+    gap: 0.1rem;
+    align-items: center;
+}
+
+.data-table tbody td.actions button {
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0.4rem 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.data-table tbody td.actions .edit-button {
+    color: #2c3e50;
+}
+
+.data-table tbody td.actions .delete-button {
+    color: #b43026;
+}
+
+.data-table tbody td.actions .delete-date-button {
+    color: #b47626;
+}
+
+.data-table tbody td.highest-total-value {
+    color: #85140c;
+    background-color: #fff6f5;
+}
+
+.data-table tbody td.lowest-total-value {
+    color: #0c8612;
+    background-color: #f4fff6;
+}
+
+.data-table tbody td .sort-icon {
+    color: #999;
+    margin-right: 8px;
+    cursor: grab;
+    padding: 4px 8px 4px 4px;
+    display: none;
+}
+
+.data-table tbody td .sort-icon:hover {
+    color: #333;
+}
+
+[data-sorting="true"] .data-table tbody td .sort-icon {
+    display: inline;
+}
+
+.table-pagination {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.table-pagination button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.table-pagination button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.table-pagination button:hover:not(:disabled) {
+    background-color: #f0f0f0;
+}
+
+.table-page-info {
+    font-size: 0.9rem;
+    color: #666;
+}

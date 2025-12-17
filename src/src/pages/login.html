@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EntendeDor</title>
+    <link rel="stylesheet" href="/src/style/style.css" />
+
+    <script src="https://kit.fontawesome.com/d2c0d94adb.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body id="login" class="login sw">
+
+    <main class="container">
+
+        <section class="form-section">
+
+            <h1>EntendeDor</h1>
+
+            <form id="loginForm" class="form-section-form">
+
+                <div class="form-section-form-group">
+                    <label for="username">Usuário (ou e-mail):</label>
+                    <input type="text" name="username" id="username" required />
+                </div>
+
+                <div class="form-section-form-group">
+                    <label for="password">Senha:</label>
+                    <input type="password" name="password" id="password" required autocomplete="current-password" />
+                </div>
+
+                <button id="btnLogin" type="submit" class="btn submit-btn">Login</button>
+
+                <a href="/cadastro" id="btnCriarConta">Criar conta</a>
+
+            </form>
+
+        </section>
+
+        <script type="module" src="/src/script/pages/login.ts"></script>
+
+    </main>
+
+</body>
+
+</html>

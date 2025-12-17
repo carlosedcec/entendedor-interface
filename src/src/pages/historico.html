@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EntendeDor | Histórico</title>
+    <link rel="stylesheet" href="/src/style/style.css" />
+
+    <script src="https://kit.fontawesome.com/d2c0d94adb.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body id="historico">
+
+    <header class="header">
+
+        <div class="header-container">
+
+            <h1 class="header-h1">
+                <a href="/">EntendeDor</a>
+            </h1>
+
+            <nav class="header-nav">
+                <ul>
+                    <li>
+                        <a href="/graficos"><i class="fa-solid fa-chart-line"></i> Gráficos</a>
+                    </li>
+                    <li>
+                        <a href="/historico" class="active"><i class="fa-solid fa-table-list"></i> Histórico</a>
+                    </li>
+                    <li>
+                        <a href="/gerenciamento"><i class="fa-solid fa-gear"></i> Gerenciamento</a>
+                    </li>
+                    <li>
+                        <a href="/conta"><i class="fa-solid fa-user"></i> Conta</a>
+                    </li>
+                    <li>
+                        <button id="logoutBtn"><i class="fa-solid fa-circle-left"></i> Sair</button>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+
+    <main class="container">
+
+        <section class="data-section records-section">
+
+            <h2 class="with-button">
+                Histórico de Registros
+                <button id="exportRecordsPDF"><i class="fa fa-solid fa-file"></i> Exportar PDF</button>
+            </h2>
+
+            <div class="table-container">
+                <table id="recordsDataTable" class="data-table"></table>
+            </div>
+
+        </section>
+
+        <section class="data-section events-section">
+
+            <h2 class="with-button">
+                Histórico de Eventos
+                <button id="exportEventsPDF"><i class="fa fa-solid fa-file"></i> Exportar PDF</button>
+            </h2>
+
+            <div class="table-container">
+                <table id="eventsDataTable" class="data-table"></table>
+            </div>
+
+        </section>
+
+        <script type="module" src="/src/script/pages/historico.ts"></script>
+
+    </main>
+
+</body>
+
+</html>

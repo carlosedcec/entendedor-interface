@@ -1,0 +1,100 @@
+/* Container styles */
+.container {
+    width: calc(100% - 60px);
+    max-width: 1480px;
+    display: grid;
+    grid-template-columns: auto;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    gap: 1rem;
+}
+
+#home .container {
+    grid-template-columns: 1fr 2fr;
+}
+
+#gerenciamento .container {
+    grid-template-columns: 1fr 2fr;
+}
+
+@media (max-width: 924px) {
+
+    #home .container,
+    #gerenciamento .container {
+        grid-template-columns: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding: 1.4rem;
+    }
+}
+
+/* Data Section */
+.data-section {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-width: 0;
+}
+
+.data-section.span-2 {
+    grid-column: span 2;
+}
+
+@media (max-width: 924px) {
+    .data-section.span-2 {
+        grid-column: auto;
+    }
+}
+
+.data-section h2 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.data-section h2.with-button {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.data-section h2.with-button button {
+    height: 44px;
+    text-decoration: none;
+    background-color: #38516b;
+    color: white;
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: block;
+}
+
+.data-section h2.with-button button:hover {
+    background-color: #1c2c3b;
+}
+
+[data-sorting] .sorting-buttons {
+    margin-top: 1rem;
+    display: none;
+}
+
+[data-sorting="true"] .sorting-buttons {
+    display: flex;
+    gap: 0.5rem;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EntendeDor | Gráficos</title>
+    <link rel="stylesheet" href="/src/style/style.css">
+
+    <script src="https://kit.fontawesome.com/d2c0d94adb.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body id="graficos">
+
+    <header class="header">
+        <div class="header-container">
+            <h1 class="header-h1">
+                <a href="/">EntendeDor</a>
+            </h1>
+            <nav class="header-nav">
+                <ul>
+                    <li>
+                        <a href="/graficos" class="active"><i class="fa-solid fa-chart-line"></i> Gráficos</a>
+                    </li>
+                    <li>
+                        <a href="/historico"><i class="fa-solid fa-table-list"></i> Histórico</a>
+                    </li>
+                    <li>
+                        <a href="/gerenciamento"><i class="fa-solid fa-gear"></i> Gerenciamento</a>
+                    </li>
+                    <li>
+                        <a href="/conta"><i class="fa-solid fa-user"></i> Conta</a>
+                    </li>
+                    <li>
+                        <button id="logoutBtn"><i class="fa-solid fa-circle-left"></i> Sair</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section id="chart1" class="data-section">
+            <div class="chart-element"></div>
+            <div class="table-pagination">
+                <button class="previous-page">&lt; Anterior</button>
+                <span class="table-page-info"></span>
+                <button class="next-page">Próximo &gt;</button>
+            </div>
+        </section>
+
+        <section id="chart2" class="data-section">
+            <div class="chart-element"></div>
+            <div class="table-pagination">
+                <button class="previous-page">&lt; Anterior</button>
+                <span class="table-page-info"></span>
+                <button class="next-page">Próximo &gt;</button>
+            </div>
+        </section>
+
+        <script type="module" src="/src/script/pages/graficos.ts"></script>
+
+    </main>
+
+</body>
+
+</html>

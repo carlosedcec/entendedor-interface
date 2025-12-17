@@ -1,0 +1,65 @@
+body.login {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+body.login .container {
+    max-width: 600px;
+}
+
+body#login #loginForm {
+    text-align: center;
+}
+
+body.login h1 {
+    color: #38516b;
+    text-align: center;
+    margin: 0px 0px 20px;
+}
+
+body.login h2 {
+    color: #38516b;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+body#login #btnLogin {
+    margin-bottom: 12px;
+}
+
+body#login #btnCriarConta {
+    color: inherit;
+    text-align: center;
+    text-decoration: none;
+}
+
+body#login #btnCriarConta:hover {
+    text-decoration: underline
+}
+
+body#cadastro #section-header {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+body#cadastro #btnVoltar {
+    color: #6584a5;
+    font-size: 1rem;
+    background: none;
+    border: none;
+    padding-top: 7px;
+    position: absolute;
+    left: 0px;
+    cursor: pointer;
+}
+
+body#cadastro #btnVoltar:hover {
+    color: #38516b;
+}
+
+body#cadastro #form-group-cidade {
+    width: 80%;
+    float: left;
+    margin-right: 20px;
+}

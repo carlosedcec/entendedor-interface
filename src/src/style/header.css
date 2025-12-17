@@ -1,0 +1,88 @@
+/* Header styles */
+.header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 2rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    width: calc(100% - 60px);
+    max-width: 1480px;
+    margin: 0 auto;
+    padding: 0 3rem;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.header-h1 {
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.header-h1 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.header-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.header-nav ul a,
+.header-nav ul button {
+    height: 44px;
+    text-decoration: none;
+    background-color: #3f556b;
+    color: white;
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: block;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.header-nav ul a.active,
+.header-nav ul a:hover,
+.header-nav ul button:hover {
+    background-color: #1c2c3b;
+}
+
+@media (max-width: 1024px) {
+
+    .header-h1 {
+        font-size: 1.8rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .header-container {
+        width: 100%;
+        padding: 0 2.2rem;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .header-container {
+        padding: 0 1.6rem;
+    }
+
+}

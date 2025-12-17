@@ -1,0 +1,57 @@
+/* Modal styles */
+dialog {
+    width: 420px;
+    max-width: calc(100vw - 40px);
+    place-self: center;
+    padding: 2rem;
+    border-radius: 4px;
+    gap: 1rem;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+    border: 1px solid #ddd;
+    position: relative;
+}
+
+dialog::backdrop {
+    background-color: rgba(44, 62, 80, 0.4);
+}
+
+dialog h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+dialog .modal-buttons {
+    display: flex;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+dialog .modal-buttons button {
+    height: 44px;
+    flex: 1;
+}
+
+@media (max-width: 480px) {
+
+    dialog#painTypeModal {
+        grid-template-columns: 1fr;
+    }
+
+    dialog#painTypeModal h2 {
+        grid-column: auto;
+    }
+
+}
+
+
+@media (max-width: 360px) {
+
+    dialog {
+        padding: 1rem;
+    }
+
+    dialog#painTypeModal h2 {
+        font-size: 1rem;
+    }
+
+}

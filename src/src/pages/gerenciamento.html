@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EntendeDor | Gerenciamento</title>
+    <link rel="stylesheet" href="/src/style/style.css">
+
+    <script src="https://kit.fontawesome.com/d2c0d94adb.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body id="gerenciamento">
+
+    <header class="header">
+        <div class="header-container">
+            <h1 class="header-h1">
+                <a href="/">EntendeDor</a>
+            </h1>
+            <nav class="header-nav">
+                <ul>
+                    <li>
+                        <a href="/graficos"><i class="fa-solid fa-chart-line"></i> Gráficos</a>
+                    </li>
+                    <li>
+                        <a href="/historico"><i class="fa-solid fa-table-list"></i> Histórico</a>
+                    </li>
+                    <li>
+                        <a href="/gerenciamento" class="active"><i class="fa-solid fa-gear"></i> Gerenciamento</a>
+                    </li>
+                    <li>
+                        <a href="/conta"><i class="fa-solid fa-user"></i> Conta</a>
+                    </li>
+                    <li>
+                        <button id="logoutBtn"><i class="fa-solid fa-circle-left"></i> Sair</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="data-section records-section span-2">
+
+            <div class="tabs-section">
+
+                <nav class="tabs-nav">
+                    <ul id="recordsTabs"></ul>
+                </nav>
+
+                <div class="table-container">
+                    <h2>Registros - <span id="recordTabLabel">Dor</span></h2>
+                    <table id="recordsDataTableBySymptom" class="data-table"></table>
+                </div>
+
+            </div>
+
+            <dialog id="recordModal" class="form-section">
+
+                <h2>Editar Registro</h2>
+
+                <form id="recordForm">
+
+                    <input type="hidden" name="recordId" id="recordId">
+
+                    <div class="form-section-form-group">
+                        <label for="recordValue">Valor (0-10):</label>
+                        <input type="number" name="recordValue" id="recordValue" min="0" max="10" placeholder="0-10" step="0.1" required>
+                    </div>
+
+                    <div class="form-section-form-group">
+                        <label for="recordDate">Data:</label>
+                        <input type="text" name="recordDate" id="recordDate" class="span-2" placeholder="Descrição do Evento" required>
+                    </div>
+
+                    <div class="form-section-form-group">
+                        <label for="recordTime">Hora:</label>
+                        <input type="text" name="recordTime" id="recordTime" class="span-2" placeholder="Descrição do Evento" required>
+                    </div>
+
+                    <div class="modal-buttons">
+                        <button type="button" class="btn cancel-btn" data-close-modal>Cancelar</span>
+                            <button type="submit" class="btn submit-btn">Adicionar</button>
+                    </div>
+
+                </form>
+
+            </dialog>
+
+        </section>
+
+        <section id="symptomDataSection" class="data-section symptoms-section" data-sorting="false">
+
+            <h2 class="with-button">
+                Sintomas
+                <button id="sortSymptomsButton"><i class="fa fa-solid fa-bars"></i> Ordenar</button>
+            </h2>
+
+            <div class="table-container">
+                <table id="symptomsDataTable" class="data-table"></table>
+            </div>
+
+            <div class="sorting-buttons">
+                <button class="btn cancel-btn" id="desactivateSortButton">Cancelar</button>
+                <button class="btn submit-btn" id="saveSortButton">Salvar</button>
+            </div>
+
+            <dialog id="symptomModal" class="form-section">
+
+                <h2>Editar Sintomas</h2>
+
+                <form id="symptomForm">
+
+                    <div class="form-section-form-group">
+                        <label for="newSymptomName">Sintoma:</label>
+                        <input type="hidden" name="symptomId" id="symptomId" required>
+                        <input type="text" name="symptomName" id="symptomName" class="span-2" placeholder="Sintoma" required>
+                    </div>
+
+                    <div class="modal-buttons">
+                        <button type="button" class="btn cancel-btn" data-close-modal>Cancelar</span>
+                            <button type="submit" class="btn submit-btn">Adicionar</button>
+                    </div>
+
+                </form>
+
+            </dialog>
+
+        </section>
+
+        <section class="data-section events-section">
+
+            <h2>Eventos</h2>
+
+            <div class="table-container">
+                <table id="eventsDataTable" class="data-table"></table>
+            </div>
+
+            <dialog id="eventModal" class="form-section">
+
+                <h2>Editar Evento</h2>
+
+                <form id="eventForm">
+
+                    <input type="hidden" name="eventId" id="eventId">
+
+                    <div class="form-section-form-group">
+                        <label for="eventDescription">Descrição:</label>
+                        <input type="text" name="eventDescription" id="eventDescription" class="span-2" placeholder="Descrição do Evento" required>
+                    </div>
+
+                    <div class="form-section-form-group">
+                        <label for="eventDate">Data:</label>
+                        <input type="text" name="eventDate" id="eventDate" class="span-2" placeholder="Descrição do Evento" required>
+                    </div>
+
+                    <div class="form-section-form-group">
+                        <label for="eventTime">Hora:</label>
+                        <input type="text" name="eventTime" id="eventTime" class="span-2" placeholder="Descrição do Evento" required>
+                    </div>
+
+                    <div class="modal-buttons">
+                        <button type="button" class="btn cancel-btn" data-close-modal>Cancelar</span>
+                            <button type="submit" class="btn submit-btn">Adicionar</button>
+                    </div>
+
+                </form>
+
+            </dialog>
+
+        </section>
+
+        <script type="module" src="/src/script/pages/gerenciamento.ts"></script>
+
+    </main>
+
+</body>
+
+</html>

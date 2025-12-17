@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EntendeDor</title>
+    <link rel="stylesheet" href="/src/style/style.css" />
+
+    <script src="https://kit.fontawesome.com/d2c0d94adb.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body id="home">
+
+    <header class="header">
+
+        <div class="header-container">
+
+            <h1 class="header-h1">
+                <a href="#">EntendeDor</a>
+            </h1>
+
+            <nav class="header-nav">
+                <ul>
+                    <li>
+                        <a href="/graficos"><i class="fa-solid fa-chart-line"></i> Gráficos</a>
+                    </li>
+                    <li>
+                        <a href="/historico"><i class="fa-solid fa-table-list"></i> Histórico</a>
+                    </li>
+                    <li>
+                        <a href="/gerenciamento"><i class="fa-solid fa-gear"></i> Gerenciamento</a>
+                    </li>
+                    <li>
+                        <a href="/conta"><i class="fa-solid fa-user"></i> Conta</a>
+                    </li>
+                    <li>
+                        <button id="logoutBtn"><i class="fa-solid fa-circle-left"></i> Sair</button>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+
+    <main class="container">
+
+        <section id="recordsFormSection" class="form-section">
+
+            <h2>Cadastro de Registros</h2>
+
+            <nav class="records-form-section-nav">
+                <button class="active" data-form="recordForm"><i class="fa fa-solid fa-circle-dot"></i> Simples</button>
+                <button data-form="batchRecordsForm"><i class="fa fa-solid fa-list-ul"></i> Lote</button>
+            </nav>
+
+            <form id="recordForm" class="form-section-form active">
+
+                <div class="form-section-form-group">
+                    <label for="symptomId">Sintoma:</label>
+                    <div id="symptomSelectContainer">
+                        <select name="symptomId" id="symptomId" required>
+                            <option value="" disabled selected>Selecione...</option>
+                        </select>
+                        <button type="button" data-open-modal="symptomModal">+</button>
+                    </div>
+                </div>
+
+                <div class="form-section-form-group">
+                    <label for="recordDate">Data:</label>
+                    <input type="text" name="recordDate" id="recordDate" />
+                </div>
+
+                <div class="form-section-form-group">
+                    <label for="recordTime">Hora:</label>
+                    <input type="text" name="recordTime" id="recordTime" required placeholder="00:00" />
+                </div>
+
+                <div class="form-section-form-group">
+                    <label for="recordValue">Valor (0-10):</label>
+                    <input type="number" name="recordValue" id="recordValue" step="0.1" min="0" max="10" placeholder="0-10" required />
+                </div>
+
+                <button type="submit" class="btn submit-btn">+ Adicionar</button>
+
+            </form>
+
+            <form id="batchRecordsForm" class="form-section-form">
+
+                <div class="form-section-form-group col-1">
+                    <label for="batchRecordDate">Data:</label>
+                    <input type="text" name="batchRecordDate" id="batchRecordDate" required />
+                </div>
+
+                <div class="form-section-form-group col-1">
+                    <label for="batchRecordTime">Hora:</label>
+                    <input type="text" name="batchRecordTime" id="batchRecordTime" required placeholder="00:00" />
+                </div>
+
+                <button type="submit" class="btn submit-btn col-2">+ Adicionar</button>
+
+            </form>
+
+            <dialog id="symptomModal" class="form-section">
+
+                <h2>Nova Categoria</h2>
+
+                <form id="symptomForm">
+                    <div class="form-section-form-group">
+                        <label for="symptomName">Sintoma:</label>
+                        <input type="text" name="symptomName" id="symptomName" class="col-2" placeholder="Sintoma" required />
+                    </div>
+                    <div class="modal-buttons">
+                        <button type="button" class="btn cancel-btn" data-close-modal>Cancelar</button>
+                        <button type="submit" class="btn submit-btn">Adicionar</button>
+                    </div>
+                </form>
+
+            </dialog>
+
+        </section>
+
+        <section class="data-section">
+            <h2>Histórico de Registros</h2>
+            <div class="table-container">
+                <table id="recordsDataTable" class="data-table"></table>
+            </div>
+        </section>
+
+        <section class="form-section events-section">
+            <h2>Cadastro de Eventos</h2>
+
+            <form id="eventForm" class="form-section-form events-section-form">
+                <div class="form-section-form-group">
+                    <label for="eventDescription">Evento:</label>
+                    <input type="text" name="eventDescription" id="eventDescription" placeholder="Descreva o evento aqui" required />
+                </div>
+                <div class="form-section-form-group">
+                    <label for="eventDate">Data:</label>
+                    <input type="text" name="eventDate" id="eventDate" required />
+                </div>
+                <div class="form-section-form-group">
+                    <label for="eventTime">Hora:</label>
+                    <input type="text" name="eventTime" id="eventTime" placeholder="00:00" required />
+                </div>
+                <button type="submit" class="btn submit-btn">+ Adicionar</button>
+            </form>
+        </section>
+
+        <section class="data-section">
+            <h2>Histórico de Eventos</h2>
+            <div class="table-container">
+                <table id="eventsDataTable" class="data-table"></table>
+            </div>
+        </section>
+
+        <script type="module" src="/src/script/pages/home.ts"></script>
+
+    </main>
+
+</body>
+
+</html>

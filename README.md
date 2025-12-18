@@ -28,7 +28,7 @@ Construída com Python (flask, openapi e sqlalchemy) e SQLIte
 
 2. Certifique-se de ter o [Docker](https://docs.docker.com/engine/install/) instalado e em execução em sua máquina.
 
-3. Configure e execute a [aplicação python](https://github.com/carlosedcec/entendedor-api) para subir o servidor.
+3. Configure e execute a [aplicação python](https://github.com/carlosedcec/entendedor-api) para subir o servidor de dados.
 
 4. Caso ainda não tenha criado, crie uma docker network para que os containers possam comunicar-se entre si **executando como administrador** o seguinte comando:
 
